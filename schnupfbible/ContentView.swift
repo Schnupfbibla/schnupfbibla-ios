@@ -15,47 +15,48 @@ struct ContentView: View {
     @EnvironmentObject var firestoreManager: SBDataModel
     
     @AppStorage("firstLaunch") private var showWelcomeSheet: Bool = true
-    @State private var showIntersitialAd: Bool = false
-    
-    @State private var scrollCount = 0
+    @State var showSettings: Bool = false
     
     var body: some View {
-        NavigationView() {
+        VStack {
             SayingView()
                 .welcomeSheet(isPresented: $showWelcomeSheet, onDismiss: {
                     showWelcomeSheet = false
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: {
                         status in
-                                    switch status {
-                                        case .authorized:
-                                            print("enable tracking")
-                                        case .denied:
-                                            print("disable tracking")
-                                        default:
-                                            print("disable tracking")
-                                    }
+                        switch status {
+                        case .authorized:
+                            print("enable tracking")
+                        case .denied:
+                            print("disable tracking")
+                        default:
+                            print("disable tracking")
+                        }
                     })
                 }, pages: OnboardingWelcomeSheetPages)
-                .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    NavigationLink(destination: SettingsView()) {
-                        Label("", systemImage: "gear")
+            
+            HStack {
+                Button(action: {
+                    showSettings = true
+                }, label: {
+                    Label("", systemImage: "gear")}).popover(isPresented: $showSettings, arrowEdge: .bottom) {
+                        SettingsView()
                     }
-                    Spacer()
-                    Button(action: {
-                        firestoreManager.prevSaying()
-                        
-                    }) {
-                        Label("", systemImage: "arrowtriangle.backward.fill")
-                    }
-                    Button(action: {
-                        firestoreManager.nextSaying()
-                    }) {
-                        Label("", systemImage: "arrowtriangle.forward.fill")
-                    }
-                    
-                }
-            }
+                            
+                            Spacer()
+                            Button(action: {
+                                firestoreManager.prevSaying()
+                                
+                            }) {
+                                Label("", systemImage: "arrowtriangle.backward.fill")
+                            }
+                            Button(action: {
+                                firestoreManager.nextSaying()
+                            }) {
+                                Label("", systemImage: "arrowtriangle.forward.fill")
+                            }
+
+            }.padding(24.0)
         }
     }
 }

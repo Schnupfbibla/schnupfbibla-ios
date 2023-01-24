@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @AppStorage("vulgarContentAllowed") private var vulgarContentAllowed: Bool = false
     
     @ObservedObject private var viewModel: SubmissionViewModel
@@ -21,6 +23,13 @@ struct SettingsView: View {
     }
     
     var body: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Button("Schliessen") {
+                    dismiss()
+                }
+            }.padding(24.0)
             List {
                 Section() {
                     Toggle("Explizite Inhalte erlauben", isOn: $vulgarContentAllowed)
@@ -39,7 +48,8 @@ struct SettingsView: View {
                         .welcomeSheet(isPresented: $showThankYouSheet, pages: SubmissionThankYouPages)
                 }
             }.navigationTitle(Text("Einstellungen"))
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

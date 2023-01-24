@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89163FFB297FE2260013901A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */; };
+		89163FFD297FE2260013901A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFC297FE2260013901A /* FirebaseAuth */; };
+		89163FFF297FE2260013901A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFE297FE2260013901A /* FirebaseFirestoreSwift */; };
 		89873947297B191A00A52599 /* SubmissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89873946297B191A00A52599 /* SubmissionViewModel.swift */; };
 		8987394A297B210400A52599 /* WelcomeSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 89873949297B210400A52599 /* WelcomeSheet */; };
 		8987394C297B474C00A52599 /* WelcomeSheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987394B297B474C00A52599 /* WelcomeSheetContent.swift */; };
 		89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 89873962297B5A8400A52599 /* GoogleMobileAds */; };
-		89873968297C35E500A52599 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89873967297C35E500A52599 /* FirebaseAnalyticsSwift */; };
-		8987396A297C35E500A52599 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89873969297C35E500A52599 /* FirebaseFirestoreSwift */; };
 		898CBFB52979B4C50001C6F4 /* schnupfbibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */; };
 		898CBFB72979B4C50001C6F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB62979B4C50001C6F4 /* ContentView.swift */; };
 		898CBFB92979B4C60001C6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFB82979B4C60001C6F4 /* Assets.xcassets */; };
@@ -48,10 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89873968297C35E500A52599 /* FirebaseAnalyticsSwift in Frameworks */,
+				89163FFF297FE2260013901A /* FirebaseFirestoreSwift in Frameworks */,
+				89163FFB297FE2260013901A /* FirebaseAnalyticsSwift in Frameworks */,
 				89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */,
 				8987394A297B210400A52599 /* WelcomeSheet in Frameworks */,
-				8987396A297C35E500A52599 /* FirebaseFirestoreSwift in Frameworks */,
+				89163FFD297FE2260013901A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +140,9 @@
 			packageProductDependencies = (
 				89873949297B210400A52599 /* WelcomeSheet */,
 				89873962297B5A8400A52599 /* GoogleMobileAds */,
-				89873967297C35E500A52599 /* FirebaseAnalyticsSwift */,
-				89873969297C35E500A52599 /* FirebaseFirestoreSwift */,
+				89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */,
+				89163FFC297FE2260013901A /* FirebaseAuth */,
+				89163FFE297FE2260013901A /* FirebaseFirestoreSwift */,
 			);
 			productName = schnupfbible;
 			productReference = 898CBFB12979B4C50001C6F4 /* schnupfbible.app */;
@@ -172,7 +175,7 @@
 			packageReferences = (
 				89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */,
 				89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
-				89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 898CBFB22979B4C50001C6F4 /* Products */;
 			projectDirPath = "";
@@ -439,6 +442,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MAJKFL/Welcome-Sheet";
@@ -455,17 +466,24 @@
 				kind = branch;
 			};
 		};
-		89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		89163FFC297FE2260013901A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		89163FFE297FE2260013901A /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		89873949297B210400A52599 /* WelcomeSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */;
@@ -475,16 +493,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
-		};
-		89873967297C35E500A52599 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		89873969297C35E500A52599 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
