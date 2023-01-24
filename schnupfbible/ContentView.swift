@@ -6,21 +6,63 @@
 //
 
 import SwiftUI
+import WelcomeSheet
+import AppTrackingTransparency
+import FirebaseCore
 
 struct ContentView: View {
+    
+    @EnvironmentObject var firestoreManager: SBDataModel
+    
+    @AppStorage("firstLaunch") private var showWelcomeSheet: Bool = true
+    @State private var showIntersitialAd: Bool = false
+    
+    @State private var scrollCount = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView() {
+            SayingView()
+                .welcomeSheet(isPresented: $showWelcomeSheet, onDismiss: {
+                    showWelcomeSheet = false
+                    ATTrackingManager.requestTrackingAuthorization(completionHandler: {
+                        status in
+                                    switch status {
+                                        case .authorized:
+                                            print("enable tracking")
+                                        case .denied:
+                                            print("disable tracking")
+                                        default:
+                                            print("disable tracking")
+                                    }
+                    })
+                }, pages: OnboardingWelcomeSheetPages)
+                .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    NavigationLink(destination: SettingsView()) {
+                        Label("", systemImage: "gear")
+                    }
+                    Spacer()
+                    Button(action: {
+                        firestoreManager.prevSaying()
+                        
+                    }) {
+                        Label("", systemImage: "arrowtriangle.backward.fill")
+                    }
+                    Button(action: {
+                        firestoreManager.nextSaying()
+                    }) {
+                        Label("", systemImage: "arrowtriangle.forward.fill")
+                    }
+                    
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(SBDataModel())
     }
 }

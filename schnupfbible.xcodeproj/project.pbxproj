@@ -7,19 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89873947297B191A00A52599 /* SubmissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89873946297B191A00A52599 /* SubmissionViewModel.swift */; };
+		8987394A297B210400A52599 /* WelcomeSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 89873949297B210400A52599 /* WelcomeSheet */; };
+		8987394C297B474C00A52599 /* WelcomeSheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987394B297B474C00A52599 /* WelcomeSheetContent.swift */; };
+		89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 89873962297B5A8400A52599 /* GoogleMobileAds */; };
+		89873968297C35E500A52599 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89873967297C35E500A52599 /* FirebaseAnalyticsSwift */; };
+		8987396A297C35E500A52599 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89873969297C35E500A52599 /* FirebaseFirestoreSwift */; };
 		898CBFB52979B4C50001C6F4 /* schnupfbibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */; };
 		898CBFB72979B4C50001C6F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB62979B4C50001C6F4 /* ContentView.swift */; };
 		898CBFB92979B4C60001C6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFB82979B4C60001C6F4 /* Assets.xcassets */; };
 		898CBFBD2979B4C60001C6F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFBC2979B4C60001C6F4 /* Preview Assets.xcassets */; };
+		898CBFC52979B8F50001C6F4 /* SayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFC42979B8F50001C6F4 /* SayingView.swift */; };
+		898CBFC72979CBA90001C6F4 /* SingleAxisGeoReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */; };
+		898CBFC92979D3EA0001C6F4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFC82979D3EA0001C6F4 /* SettingsView.swift */; };
+		898CBFD02979E1090001C6F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */; };
+		898CBFD52979E48F0001C6F4 /* SBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFD42979E48F0001C6F4 /* SBDataModel.swift */; };
+		898CBFD72979E6AC0001C6F4 /* Saying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFD62979E6AC0001C6F4 /* Saying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89873946297B191A00A52599 /* SubmissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewModel.swift; sourceTree = "<group>"; };
+		8987394B297B474C00A52599 /* WelcomeSheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSheetContent.swift; sourceTree = "<group>"; };
 		898CBFB12979B4C50001C6F4 /* schnupfbible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schnupfbible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schnupfbibleApp.swift; sourceTree = "<group>"; };
 		898CBFB62979B4C50001C6F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		898CBFB82979B4C60001C6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		898CBFBA2979B4C60001C6F4 /* schnupfbible.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schnupfbible.entitlements; sourceTree = "<group>"; };
 		898CBFBC2979B4C60001C6F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		898CBFC32979B7230001C6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		898CBFC42979B8F50001C6F4 /* SayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingView.swift; sourceTree = "<group>"; };
+		898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAxisGeoReader.swift; sourceTree = "<group>"; };
+		898CBFC82979D3EA0001C6F4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		898CBFD42979E48F0001C6F4 /* SBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBDataModel.swift; sourceTree = "<group>"; };
+		898CBFD62979E6AC0001C6F4 /* Saying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +48,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89873968297C35E500A52599 /* FirebaseAnalyticsSwift in Frameworks */,
+				89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */,
+				8987394A297B210400A52599 /* WelcomeSheet in Frameworks */,
+				8987396A297C35E500A52599 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8987395E297B59DF00A52599 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		898CBFA82979B4C50001C6F4 = {
 			isa = PBXGroup;
 			children = (
 				898CBFB32979B4C50001C6F4 /* schnupfbible */,
 				898CBFB22979B4C50001C6F4 /* Products */,
+				8987395E297B59DF00A52599 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +85,16 @@
 		898CBFB32979B4C50001C6F4 /* schnupfbible */ = {
 			isa = PBXGroup;
 			children = (
+				898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */,
+				898CBFC32979B7230001C6F4 /* Info.plist */,
 				898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */,
+				898CBFD42979E48F0001C6F4 /* SBDataModel.swift */,
+				898CBFD62979E6AC0001C6F4 /* Saying.swift */,
 				898CBFB62979B4C50001C6F4 /* ContentView.swift */,
+				8987394B297B474C00A52599 /* WelcomeSheetContent.swift */,
+				898CBFC42979B8F50001C6F4 /* SayingView.swift */,
+				898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */,
+				898CBFCC2979D5A90001C6F4 /* Settings */,
 				898CBFB82979B4C60001C6F4 /* Assets.xcassets */,
 				898CBFBA2979B4C60001C6F4 /* schnupfbible.entitlements */,
 				898CBFBB2979B4C60001C6F4 /* Preview Content */,
@@ -67,6 +108,15 @@
 				898CBFBC2979B4C60001C6F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		898CBFCC2979D5A90001C6F4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				898CBFC82979D3EA0001C6F4 /* SettingsView.swift */,
+				89873946297B191A00A52599 /* SubmissionViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +135,12 @@
 			dependencies = (
 			);
 			name = schnupfbible;
+			packageProductDependencies = (
+				89873949297B210400A52599 /* WelcomeSheet */,
+				89873962297B5A8400A52599 /* GoogleMobileAds */,
+				89873967297C35E500A52599 /* FirebaseAnalyticsSwift */,
+				89873969297C35E500A52599 /* FirebaseFirestoreSwift */,
+			);
 			productName = schnupfbible;
 			productReference = 898CBFB12979B4C50001C6F4 /* schnupfbible.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +169,11 @@
 				Base,
 			);
 			mainGroup = 898CBFA82979B4C50001C6F4;
+			packageReferences = (
+				89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */,
+				89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 898CBFB22979B4C50001C6F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +190,7 @@
 			files = (
 				898CBFBD2979B4C60001C6F4 /* Preview Assets.xcassets in Resources */,
 				898CBFB92979B4C60001C6F4 /* Assets.xcassets in Resources */,
+				898CBFD02979E1090001C6F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898CBFC92979D3EA0001C6F4 /* SettingsView.swift in Sources */,
+				898CBFD52979E48F0001C6F4 /* SBDataModel.swift in Sources */,
+				898CBFC52979B8F50001C6F4 /* SayingView.swift in Sources */,
+				898CBFC72979CBA90001C6F4 /* SingleAxisGeoReader.swift in Sources */,
+				89873947297B191A00A52599 /* SubmissionViewModel.swift in Sources */,
 				898CBFB72979B4C50001C6F4 /* ContentView.swift in Sources */,
 				898CBFB52979B4C50001C6F4 /* schnupfbibleApp.swift in Sources */,
+				8987394C297B474C00A52599 /* WelcomeSheetContent.swift in Sources */,
+				898CBFD72979E6AC0001C6F4 /* Saying.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,6 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -269,6 +340,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = schnupfbible/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schnupfbiblä";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -277,17 +351,20 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = " -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +384,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = schnupfbible/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schnupfbiblä";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -315,17 +395,20 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = " -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +437,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MAJKFL/Welcome-Sheet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89873949297B210400A52599 /* WelcomeSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */;
+			productName = WelcomeSheet;
+		};
+		89873962297B5A8400A52599 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		89873967297C35E500A52599 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		89873969297C35E500A52599 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89873966297C35E500A52599 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 898CBFA92979B4C50001C6F4 /* Project object */;
 }
