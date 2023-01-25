@@ -12,6 +12,9 @@ struct Saying {
     var paragraphs: [String];
     var author: String;
     var explicit: Bool;
+    
+    var id: Int;
+    var name: String;
 }
 
 struct Submission {

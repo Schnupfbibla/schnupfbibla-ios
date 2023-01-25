@@ -17,6 +17,7 @@ class SBDataModel: ObservableObject {
     @Published var saying: Saying? = nil
     @Published var meta: Meta = Meta(highestId: 0)
     @AppStorage("index") var index: Int = 0
+    @AppStorage("docId") var docId: String = ""
     @AppStorage("vulgarContentAllowed") private var vulgarContentAllowed: Bool = false
     
     init() {
@@ -66,12 +67,37 @@ class SBDataModel: ObservableObject {
                     if (data["explicit"] as? Bool ?? false && !vulgarContentAllowed) {
                         fwd ? self.nextSaying() : self.prevSaying()
                     } else {
-                        self.saying = Saying(title: data["title"] as? String ?? "", paragraphs: data["paragraphs"] as? [String] ?? [], author: data["author"] as? String ?? "", explicit: data["explicit"] as? Bool ?? true)
+                        self.saying = Saying(title: data["title"] as? String ?? "", paragraphs: data["paragraphs"] as? [String] ?? [], author: data["author"] as? String ?? "", explicit: data["explicit"] as? Bool ?? true, id: 0, name: document.documentID)
                     }
                 }
             }
 
         }
+    }
+    
+    func randomSaying() {
+        let db = Firestore.firestore()
+        let subm = db.collection("sayings")
+        let key = subm.document().documentID
+        
+        print("[ rand key ] \(key)")
+        
+        subm.whereField("__name__", isGreaterThan: key).whereField("explicit", in: self.vulgarContentAllowed ? [true, false] : [false]).limit(to: 1).getDocuments(completion: {
+            snapshot, error in
+            
+            if (snapshot == nil || ((snapshot?.documents.count ?? 0) < 1)) {
+                
+                return self.randomSaying()
+            }
+            if (snapshot?.documents[0].documentID == self.saying?.name ?? "") {
+                return self.randomSaying()
+            }
+            (snapshot?.documents ?? []).forEach({
+                DocumentSnapshot in
+                let data = DocumentSnapshot.data()
+                self.saying = Saying(title: data["title"] as? String ?? "", paragraphs: data["paragraphs"] as? [String] ?? [], author: data["author"] as? String ?? "", explicit: data["explicit"] as? Bool ?? true, id: 0, name: DocumentSnapshot.documentID)
+            })
+        })
     }
     
     func nextSaying() {
