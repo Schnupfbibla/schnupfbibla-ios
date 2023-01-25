@@ -36,27 +36,39 @@ struct ContentView: View {
                 }, pages: OnboardingWelcomeSheetPages)
             
             HStack {
-                Button(action: {
-                    showSettings = true
-                }, label: {
-                    Label("", systemImage: "gear")}).popover(isPresented: $showSettings, arrowEdge: .bottom) {
-                        SettingsView()
+                Button(action: { showSettings = true }, label: {Label("", systemImage: "gear")})
+                    .popover(isPresented: $showSettings, arrowEdge: .bottom) {
+                        SettingsView().font(.body)
                     }
-                            
-                            Spacer()
-                            Button(action: {
-                                firestoreManager.prevSaying()
-                                
-                            }) {
-                                Label("", systemImage: "arrowtriangle.backward.fill")
-                            }
-                            Button(action: {
-                                firestoreManager.nextSaying()
-                            }) {
-                                Label("", systemImage: "arrowtriangle.forward.fill")
-                            }
+                Spacer()
+                Button(action: {
+                    firestoreManager.randomSaying()
+                    
+                }) {
+                    Label("", systemImage: "dice")
+                }
+                
+//                Spacer()
+//                Button(action: {
+//                    firestoreManager.prevSaying()
+//
+//                }) {
+//                    Label("", systemImage: "arrowtriangle.backward.fill")
+//                }
+//                Button(action: {
+//                    firestoreManager.nextSaying()
+//                }) {
+//                    Label("", systemImage: "arrowtriangle.forward.fill")
+//                }
+                Spacer()
+                
+                Button(action: {
+                    firestoreManager.setLikeState()
+                }) {
+                    Label("", systemImage: firestoreManager.likedSaying() ? "heart.fill" : "heart")
+                }
 
-            }.padding(24.0)
+            }.padding(24.0).font(.system(size: 32.0))
         }
     }
 }
