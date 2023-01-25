@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89163FFB297FE2260013901A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */; };
-		89163FFD297FE2260013901A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFC297FE2260013901A /* FirebaseAuth */; };
-		89163FFF297FE2260013901A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89163FFE297FE2260013901A /* FirebaseFirestoreSwift */; };
+		89164002297FE2F30013901A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89164001297FE2F30013901A /* FirebaseAnalyticsSwift */; };
+		89164004297FE2F30013901A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 89164003297FE2F30013901A /* FirebaseAuth */; };
+		89164006297FE2F30013901A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89164005297FE2F30013901A /* FirebaseFirestoreSwift */; };
+		8933B5D829818ED50056043F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8933B5D729818ED50056043F /* StoreKit.framework */; };
+		8933B5DB298196860056043F /* AccountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DA298196860056043F /* AccountDataModel.swift */; };
+		8933B5DE298196AF0056043F /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DD298196AF0056043F /* DBUser.swift */; };
+		8933B5E0298197410056043F /* SayingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DF298197410056043F /* SayingsDataModel.swift */; };
+		8933B5E42981AF060056043F /* NonceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5E32981AF060056043F /* NonceGenerator.swift */; };
+		8933B5E72981AFF80056043F /* SIWACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5E62981AFF80056043F /* SIWACoordinator.swift */; };
 		89873947297B191A00A52599 /* SubmissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89873946297B191A00A52599 /* SubmissionViewModel.swift */; };
 		8987394A297B210400A52599 /* WelcomeSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 89873949297B210400A52599 /* WelcomeSheet */; };
 		8987394C297B474C00A52599 /* WelcomeSheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987394B297B474C00A52599 /* WelcomeSheetContent.swift */; };
-		89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 89873962297B5A8400A52599 /* GoogleMobileAds */; };
 		898CBFB52979B4C50001C6F4 /* schnupfbibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */; };
 		898CBFB72979B4C50001C6F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFB62979B4C50001C6F4 /* ContentView.swift */; };
 		898CBFB92979B4C60001C6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFB82979B4C60001C6F4 /* Assets.xcassets */; };
@@ -27,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8933B5D729818ED50056043F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8933B5DA298196860056043F /* AccountDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataModel.swift; sourceTree = "<group>"; };
+		8933B5DD298196AF0056043F /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
+		8933B5DF298197410056043F /* SayingsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingsDataModel.swift; sourceTree = "<group>"; };
+		8933B5E32981AF060056043F /* NonceGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceGenerator.swift; sourceTree = "<group>"; };
+		8933B5E62981AFF80056043F /* SIWACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWACoordinator.swift; sourceTree = "<group>"; };
 		89873946297B191A00A52599 /* SubmissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewModel.swift; sourceTree = "<group>"; };
 		8987394B297B474C00A52599 /* WelcomeSheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSheetContent.swift; sourceTree = "<group>"; };
 		898CBFB12979B4C50001C6F4 /* schnupfbible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schnupfbible.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,20 +60,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89163FFF297FE2260013901A /* FirebaseFirestoreSwift in Frameworks */,
-				89163FFB297FE2260013901A /* FirebaseAnalyticsSwift in Frameworks */,
-				89873963297B5A8400A52599 /* GoogleMobileAds in Frameworks */,
+				89164002297FE2F30013901A /* FirebaseAnalyticsSwift in Frameworks */,
+				89164004297FE2F30013901A /* FirebaseAuth in Frameworks */,
+				8933B5D829818ED50056043F /* StoreKit.framework in Frameworks */,
 				8987394A297B210400A52599 /* WelcomeSheet in Frameworks */,
-				89163FFD297FE2260013901A /* FirebaseAuth in Frameworks */,
+				89164006297FE2F30013901A /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8933B5D92981966C0056043F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				898CBFD42979E48F0001C6F4 /* SBDataModel.swift */,
+				8933B5DA298196860056043F /* AccountDataModel.swift */,
+				8933B5DF298197410056043F /* SayingsDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		8933B5DC298196990056043F /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				898CBFD62979E6AC0001C6F4 /* Saying.swift */,
+				8933B5DD298196AF0056043F /* DBUser.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8933B5E52981AFE00056043F /* SignInWApple */ = {
+			isa = PBXGroup;
+			children = (
+				8933B5E32981AF060056043F /* NonceGenerator.swift */,
+				8933B5E62981AFF80056043F /* SIWACoordinator.swift */,
+			);
+			path = SignInWApple;
+			sourceTree = "<group>";
+		};
 		8987395E297B59DF00A52599 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8933B5D729818ED50056043F /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,12 +130,13 @@
 				898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */,
 				898CBFC32979B7230001C6F4 /* Info.plist */,
 				898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */,
-				898CBFD42979E48F0001C6F4 /* SBDataModel.swift */,
-				898CBFD62979E6AC0001C6F4 /* Saying.swift */,
+				8933B5D92981966C0056043F /* DataModel */,
+				8933B5DC298196990056043F /* Interface */,
 				898CBFB62979B4C50001C6F4 /* ContentView.swift */,
 				8987394B297B474C00A52599 /* WelcomeSheetContent.swift */,
 				898CBFC42979B8F50001C6F4 /* SayingView.swift */,
 				898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */,
+				8933B5E52981AFE00056043F /* SignInWApple */,
 				898CBFCC2979D5A90001C6F4 /* Settings */,
 				898CBFB82979B4C60001C6F4 /* Assets.xcassets */,
 				898CBFBA2979B4C60001C6F4 /* schnupfbible.entitlements */,
@@ -139,10 +180,9 @@
 			name = schnupfbible;
 			packageProductDependencies = (
 				89873949297B210400A52599 /* WelcomeSheet */,
-				89873962297B5A8400A52599 /* GoogleMobileAds */,
-				89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */,
-				89163FFC297FE2260013901A /* FirebaseAuth */,
-				89163FFE297FE2260013901A /* FirebaseFirestoreSwift */,
+				89164001297FE2F30013901A /* FirebaseAnalyticsSwift */,
+				89164003297FE2F30013901A /* FirebaseAuth */,
+				89164005297FE2F30013901A /* FirebaseFirestoreSwift */,
 			);
 			productName = schnupfbible;
 			productReference = 898CBFB12979B4C50001C6F4 /* schnupfbible.app */;
@@ -174,8 +214,7 @@
 			mainGroup = 898CBFA82979B4C50001C6F4;
 			packageReferences = (
 				89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */,
-				89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
-				89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				89164000297FE2F30013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 898CBFB22979B4C50001C6F4 /* Products */;
 			projectDirPath = "";
@@ -205,13 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				898CBFC92979D3EA0001C6F4 /* SettingsView.swift in Sources */,
+				8933B5DB298196860056043F /* AccountDataModel.swift in Sources */,
 				898CBFD52979E48F0001C6F4 /* SBDataModel.swift in Sources */,
 				898CBFC52979B8F50001C6F4 /* SayingView.swift in Sources */,
 				898CBFC72979CBA90001C6F4 /* SingleAxisGeoReader.swift in Sources */,
+				8933B5DE298196AF0056043F /* DBUser.swift in Sources */,
 				89873947297B191A00A52599 /* SubmissionViewModel.swift in Sources */,
+				8933B5E42981AF060056043F /* NonceGenerator.swift in Sources */,
+				8933B5E72981AFF80056043F /* SIWACoordinator.swift in Sources */,
 				898CBFB72979B4C50001C6F4 /* ContentView.swift in Sources */,
 				898CBFB52979B4C50001C6F4 /* schnupfbibleApp.swift in Sources */,
 				8987394C297B474C00A52599 /* WelcomeSheetContent.swift in Sources */,
+				8933B5E0298197410056043F /* SayingsDataModel.swift in Sources */,
 				898CBFD72979E6AC0001C6F4 /* Saying.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +390,7 @@
 				INFOPLIST_FILE = schnupfbible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Schnupfbiblä";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Wir finanzieren uns von Werbung, durch Tracking fallen unsere Einnahmen erheblich höher aus.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -370,7 +415,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,6 +435,7 @@
 				INFOPLIST_FILE = schnupfbible/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Schnupfbiblä";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Wir finanzieren uns von Werbung, durch Tracking fallen unsere Einnahmen erheblich höher aus.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -414,7 +460,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -442,7 +488,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		89164000297FE2F30013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -458,41 +504,28 @@
 				kind = branch;
 			};
 		};
-		89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		89163FFA297FE2260013901A /* FirebaseAnalyticsSwift */ = {
+		89164001297FE2F30013901A /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 89164000297FE2F30013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
 		};
-		89163FFC297FE2260013901A /* FirebaseAuth */ = {
+		89164003297FE2F30013901A /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 89164000297FE2F30013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		89163FFE297FE2260013901A /* FirebaseFirestoreSwift */ = {
+		89164005297FE2F30013901A /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 89163FF9297FE2260013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 89164000297FE2F30013901A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 		89873949297B210400A52599 /* WelcomeSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89873948297B210400A52599 /* XCRemoteSwiftPackageReference "Welcome-Sheet" */;
 			productName = WelcomeSheet;
-		};
-		89873962297B5A8400A52599 /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89873961297B5A8400A52599 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

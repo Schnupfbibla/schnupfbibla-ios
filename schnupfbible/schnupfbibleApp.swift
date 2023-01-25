@@ -7,7 +7,8 @@
 
 import SwiftUI
 import FirebaseCore
-import GoogleMobileAds
+import FirebaseAuth
+import FirebaseFirestore
 import AppTrackingTransparency
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -17,9 +18,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
     return true
   }
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-    }
 }
 
 @main

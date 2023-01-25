@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct DBUser {
+    var uid: String;
+    var anon: Bool;
+    var likedSayings: [String]
+    
+    var email: String?;
+    var displayName: String?;
+}

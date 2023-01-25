@@ -13,8 +13,6 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>Wir finanzieren uns von Werbung, durch Tracking fallen unsere Einnahmen erheblich höher aus.</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
