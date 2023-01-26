@@ -56,17 +56,19 @@ struct SettingsView: View {
                 }
                 
                 Section(header: Text("SPRUCH EINREICHEN"), footer: Text("Sprüche werden in der Regel innerhalb von 2-5 Tagen gesichtet und sind anschliessend für alle Nutzer verfügbar.\nRassistische Inhalte werden nicht akzeptiert!")) {
-                    TextField("Spitzname", text: $viewModel.name)
-                    TextField("E-Mail", text: $viewModel.email).keyboardType(.emailAddress)
-                    TextField("Titel", text: $viewModel.titel)
+                    TextField("Spitzname", text: $viewModel.name).accessibilityIdentifier("nicknameField")
+                    TextField("E-Mail", text: $viewModel.email).keyboardType(.emailAddress).accessibilityIdentifier("emailField")
+                    TextField("Titel", text: $viewModel.titel).accessibilityIdentifier("titleField")
                     TextField("Spruch", text: $viewModel.bodytext,  axis: .vertical)
                         .lineLimit(10...20)
+                        .accessibilityIdentifier("contentField")
                     Button("Spruch Einreichen", action: {
                         firestoreManager.addSubmission(submission: Submission(title: viewModel.titel, content: viewModel.bodytext, email: viewModel.email, name: viewModel.name))
                         viewModel.clear()
                         showThankYouSheet.toggle()
                     }).disabled(!viewModel.formIsValid)
                         .welcomeSheet(isPresented: $showThankYouSheet, pages: SubmissionThankYouPages)
+                        .accessibilityIdentifier("submitButton")
                 }
 //                Section {
 //

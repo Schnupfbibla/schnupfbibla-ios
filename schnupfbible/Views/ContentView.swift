@@ -17,10 +17,10 @@ struct ContentView: View {
             
             HStack {
                 let _ = Self._printChanges()
-                SettingsButtonView()
+                SettingsButtonView().accessibilityIdentifier("settingsButton")
                 Spacer()
                 
-                RandomButtonView()
+                RandomButtonView().accessibilityIdentifier("randomButton")
 //                Spacer()
 //                Button(action: {
 //                    firestoreManager.prevSaying()
@@ -34,7 +34,7 @@ struct ContentView: View {
 //                    Label("", systemImage: "arrowtriangle.forward.fill")
 //                }
                 Spacer()
-                LikeButtonView()
+                LikeButtonView().accessibilityIdentifier("likeButton")
 
 
             }.padding(24.0).font(.system(size: 32.0))
@@ -42,13 +42,24 @@ struct ContentView: View {
     }
 }
 struct SayingViewWrapper: View {
-    @AppStorage("firstLaunch") private var showWelcomeSheet: Bool = true
-    
+    @AppStorage("setupCompleted") private var setupCompleted: Bool = false
+    @State private var showWelcomeSheet: Bool = false
     var body: some View {
         SayingView()
+            .onAppear {
+                print("setup was\(setupCompleted ? "" : " not") completed.")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+                   // Code you want to be delayed
+                    if (!setupCompleted) {
+                        showWelcomeSheet = true
+                    }
+                }
+                
+            }
             .welcomeSheet(isPresented: $showWelcomeSheet, onDismiss: {
-                showWelcomeSheet = false
-            }, pages: OnboardingWelcomeSheetPages)
+                setupCompleted = true
+            }
+            , pages: OnboardingWelcomeSheetPages)
     }
 }
 
@@ -96,5 +107,9 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(SBDataModel())
     }
 }
-
-
+prefix func ! (value: Binding<Bool>) -> Binding<Bool> {
+    Binding<Bool>(
+        get: { !value.wrappedValue },
+        set: { value.wrappedValue = !$0 }
+    )
+}
