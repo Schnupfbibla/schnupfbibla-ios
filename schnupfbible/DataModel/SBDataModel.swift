@@ -20,9 +20,11 @@ class SBDataModel: ObservableObject {
     @AppStorage("index") var index: Int = 0
     @AppStorage("docId") var docId: String = ""
     @AppStorage("vulgarContentAllowed") var vulgarContentAllowed: Bool = false
-    
+
     @Published var user: DBUser? = nil
     
+    @Published var titles: Dictionary<String, String> = [:]
+
     public var fbuser: User? = nil
     public var nonce: String = "";
     

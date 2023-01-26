@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Saying {
+struct Saying: Equatable {
     var title: String
     var paragraphs: [String];
     var author: String;

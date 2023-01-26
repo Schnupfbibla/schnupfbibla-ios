@@ -58,7 +58,7 @@ private extension SubmissionViewModel {
     var isBodyTextValid: AnyPublisher<Bool, Never> {
       $bodytext
         .map { bt in
-            return bt.count >= 15
+            return bt.count >= 5
             
         }
         .eraseToAnyPublisher()
@@ -66,7 +66,7 @@ private extension SubmissionViewModel {
     var isTitleValid: AnyPublisher<Bool, Never> {
       $titel
         .map { tl in
-            return tl.count >= 15
+            return tl.count >= 3
             
         }
         .eraseToAnyPublisher()

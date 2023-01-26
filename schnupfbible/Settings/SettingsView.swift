@@ -34,6 +34,7 @@ struct SettingsView: View {
                     Label("", systemImage: "xmark.circle.fill").font(.system(size: 32.0)).foregroundColor(.gray)
                 }
             }.padding(12.0)
+            
             List {
                 Section() {
                     Toggle("Explizite Inhalte erlauben", isOn: $vulgarContentAllowed)
@@ -42,9 +43,11 @@ struct SettingsView: View {
                 Section(header: Text("LIEBLINGSSPRÜCHE")) {
                     ForEach(firestoreManager.user?.likedSayings ?? [], id: \.self) {saying in
                         
-                        Button("\(saying)") {
+                        Button("\(firestoreManager.titles[saying] ?? saying)") {
                             firestoreManager.fetchSaying(uid: saying)
                             dismiss()
+                        }.onAppear {
+                            firestoreManager.fetchTitle(uid: saying)
                         }
                     }
                     if ((firestoreManager.user?.likedSayings ?? []) == []) {
@@ -71,7 +74,7 @@ struct SettingsView: View {
                 Section {
                     if (firestoreManager.user?.anon ?? true) {
                         SignInWithAppleButton(onRequest: {request in
-                            request.requestedScopes = [.email, .fullName]
+                            request.requestedScopes = []
                             firestoreManager.nonce = randomNonceString()
                             request.nonce = sha256(firestoreManager.nonce)
                         }, onCompletion: {res in
@@ -95,7 +98,7 @@ struct SettingsView: View {
                                     if let updatedCredential = (error as? NSError)?.userInfo[AuthErrorUserInfoUpdatedCredentialKey] as? OAuthCredential {
                                         print("Signing in using new cred")
                                         Auth.auth().signIn(with: updatedCredential) { (result, error) in
-                                            if let user = result?.user {
+                                            if let _ = result?.user {
                                                 // TODO: handle data migration
                                                 print("Needs migration")
                                                 firestoreManager.doSignIn(appleIDCredential: appleidcredential!, fbres: result!) // (3)
@@ -106,7 +109,7 @@ struct SettingsView: View {
                                         print("Error trying to link user: \(error.localizedDescription)")
                                     }
                                     else {
-                                        if let user = result?.user {
+                                        if let _ = result?.user {
                                             firestoreManager.doSignIn(appleIDCredential: appleidcredential!, fbres: result!)
                                         }
                                     }
@@ -124,8 +127,12 @@ struct SettingsView: View {
                         }
                     }
                 }
-            }.navigationTitle(Text("Einstellungen"))
-                .navigationBarTitleDisplayMode(.inline)
+                Section {
+                    Link("Datenschutzbestimmungen", destination: URL(string: "https://schnupfbibla.github.io/privacy.html")!)
+                    Text("Impressum:\nJesse Born\nGehrenweg 12\n5106, Veltheim AG\nEinzelperson\njesse.born@gmx.ch").frame(width: .infinity, alignment: .leading).multilineTextAlignment(.leading).foregroundColor(.gray)
+                }
+            }
+            
         }
     }
 }
