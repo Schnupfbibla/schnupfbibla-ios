@@ -34,6 +34,30 @@ extension SBDataModel {
     
             }
         }
+    func fetchTitle(uid: String) {
+        let db = Firestore.firestore()
+
+        print("[ Fetch ] saying with uid \(uid)")
+        let docRef = db.collection("sayings").document("\(uid)")
+
+        docRef.getDocument { [self] (document, error) in
+            guard error == nil else {
+                print("error", error ?? "")
+                return
+            }
+
+            if let document = document, document.exists {
+                let data = document.data()
+                if let data = data {
+                    print("saying", data)
+
+                    self.titles[uid] = data["title"] as? String ?? ""
+                    
+                }
+            }
+
+        }
+    }
         
         func randomSaying() {
             let db = Firestore.firestore()

@@ -42,9 +42,11 @@ struct SettingsView: View {
                 Section(header: Text("LIEBLINGSSPRÜCHE")) {
                     ForEach(firestoreManager.user?.likedSayings ?? [], id: \.self) {saying in
                         
-                        Button("\(saying)") {
+                        Button("\(firestoreManager.titles[saying] ?? saying)") {
                             firestoreManager.fetchSaying(uid: saying)
                             dismiss()
+                        }.onAppear {
+                            firestoreManager.fetchTitle(uid: saying)
                         }
                     }
                     if ((firestoreManager.user?.likedSayings ?? []) == []) {
@@ -71,7 +73,7 @@ struct SettingsView: View {
                 Section {
                     if (firestoreManager.user?.anon ?? true) {
                         SignInWithAppleButton(onRequest: {request in
-                            request.requestedScopes = [.email, .fullName]
+                            request.requestedScopes = []
                             firestoreManager.nonce = randomNonceString()
                             request.nonce = sha256(firestoreManager.nonce)
                         }, onCompletion: {res in
@@ -124,8 +126,7 @@ struct SettingsView: View {
                         }
                     }
                 }
-            }.navigationTitle(Text("Einstellungen"))
-                .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }

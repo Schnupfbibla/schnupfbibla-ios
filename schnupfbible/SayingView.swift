@@ -15,40 +15,34 @@ struct SayingView: View {
     let bottomCutoff = UIScreen.main.bounds.height*0.60
     
     var body: some View {
-        ScrollView {
-            Spacer().frame(height: UIScreen.main.bounds.height*0.10)
-            SingleAxisGeometryReader { g in
-                VStack {
-                    Text("\(firestoreManager.saying?.title ?? "Spruchtitel")").font(.system(size: 40.0, weight: .bold)).foregroundColor(g > topCutoff ? .primaryColor : .gray)
-                    Divider()
-                }
+        GeometryReader { scrollgeo in
+            ScrollViewReader { spos in
+                ScrollView(showsIndicators: false) {
+                    Spacer().frame(height: UIScreen.main.bounds.height*0.10).id(0)
+                    SingleAxisGeometryReader { g in
+                        VStack {
+                            Text("\(firestoreManager.saying?.title ?? "Spruchtitel")").font(.system(size: 40.0, weight: .bold))
+                                .foregroundColor(g > topCutoff ? .primaryColor : .gray)
+                            Divider()
+                        }
+                    }
+                    Spacer().frame(height: UIScreen.main.bounds.height*0.10)
+                    
+                    ForEach(firestoreManager.saying?.paragraphs ?? [], id: \.self) { p in
+                        
+                        
+                        
+                        SingleAxisGeometryReader { geo in
+                            Text("\(p)").font(.system(size: 50.0, weight: .bold)).foregroundColor(geo > topCutoff && geo < bottomCutoff ? .primaryColor : .gray).frame(maxWidth: .infinity, alignment: .trailing)
+                        }
+                        
+                        Spacer().frame(height: 30.0)
+                    }
+                    
+                    Spacer().frame(height: UIScreen.main.bounds.height*0.45)
+                }.multilineTextAlignment(.trailing).frame(width: UIScreen.main.bounds.width - 30.0)
             }
-            Spacer().frame(height: UIScreen.main.bounds.height*0.10)
-            
-            ForEach(firestoreManager.saying?.paragraphs ?? [], id: \.self) { p in
-                
-                
-                
-                SingleAxisGeometryReader { geo in
-                    Text("\(p)").font(.system(size: 50.0, weight: .bold)).foregroundColor(geo > topCutoff && geo < bottomCutoff ? .primaryColor : .gray).frame(maxWidth: .infinity, alignment: .trailing)
-                }
-                
-                Spacer().frame(height: 30.0)
-            }
-            
-            Spacer().frame(height: UIScreen.main.bounds.height*0.40)
-            
-
-//            SingleAxisGeometryReader { geo in
-//                Text("Und ist das Schiff auch noch so klein, einer muss die Putzfrau sein.").font(.system(size: 50.0, weight: .bold)).foregroundColor(geo > 0.0 && geo < 300.0 ? .black : .gray)
-//            }
-//
-//            Spacer().frame(height: 30.0)
-//
-//            Text("Prys!").font(.system(size: 50.0, weight: .bold)).frame(maxWidth: .infinity, alignment: .trailing)
-//            Spacer().frame(height: 30.0)
-            
-        }.multilineTextAlignment(.trailing).frame(width: UIScreen.main.bounds.width - 30.0)
+        }
     }
 }
 

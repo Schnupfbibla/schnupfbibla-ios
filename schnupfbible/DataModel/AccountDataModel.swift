@@ -88,13 +88,7 @@ extension SBDataModel {
     func doSignIn(appleIDCredential: ASAuthorizationAppleIDCredential, fbres: AuthDataResult) {
         self.fbuser = fbres.user
         print("[ SignIn ] signed in succ with \(self.fbuser?.uid ?? "was nil")")
-        let displayName = "\(appleIDCredential.fullName?.givenName ?? "") \(appleIDCredential.fullName?.familyName ?? "")"
-        let email = appleIDCredential.email
-        
-        
         self.user = DBUser(uid: self.fbuser?.uid ?? "", anon: false, likedSayings: self.user?.likedSayings ?? [])
-        writeUserDataDoc(displayName: displayName, email: email ?? "")
-
         self.createUserDataDoc()
     }
     func signOut() {

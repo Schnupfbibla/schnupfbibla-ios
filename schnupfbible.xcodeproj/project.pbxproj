@@ -10,7 +10,6 @@
 		89164002297FE2F30013901A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89164001297FE2F30013901A /* FirebaseAnalyticsSwift */; };
 		89164004297FE2F30013901A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 89164003297FE2F30013901A /* FirebaseAuth */; };
 		89164006297FE2F30013901A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89164005297FE2F30013901A /* FirebaseFirestoreSwift */; };
-		8933B5D829818ED50056043F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8933B5D729818ED50056043F /* StoreKit.framework */; };
 		8933B5DB298196860056043F /* AccountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DA298196860056043F /* AccountDataModel.swift */; };
 		8933B5DE298196AF0056043F /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DD298196AF0056043F /* DBUser.swift */; };
 		8933B5E0298197410056043F /* SayingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933B5DF298197410056043F /* SayingsDataModel.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8933B5D729818ED50056043F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8933B5DA298196860056043F /* AccountDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataModel.swift; sourceTree = "<group>"; };
 		8933B5DD298196AF0056043F /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
 		8933B5DF298197410056043F /* SayingsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayingsDataModel.swift; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			files = (
 				89164002297FE2F30013901A /* FirebaseAnalyticsSwift in Frameworks */,
 				89164004297FE2F30013901A /* FirebaseAuth in Frameworks */,
-				8933B5D829818ED50056043F /* StoreKit.framework in Frameworks */,
 				8987394A297B210400A52599 /* WelcomeSheet in Frameworks */,
 				89164006297FE2F30013901A /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -102,7 +99,6 @@
 		8987395E297B59DF00A52599 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8933B5D729818ED50056043F /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +191,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
@@ -379,9 +378,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = schnupfbible/schnupfbible.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"schnupfbible/Preview Content\"";
 				DEVELOPMENT_TEAM = 8C7KT6ZU59;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -424,9 +424,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = schnupfbible/schnupfbible.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"schnupfbible/Preview Content\"";
 				DEVELOPMENT_TEAM = 8C7KT6ZU59;
 				ENABLE_HARDENED_RUNTIME = YES;
