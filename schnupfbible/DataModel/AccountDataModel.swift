@@ -45,7 +45,7 @@ extension SBDataModel {
                 
                 let d = snapshot?.data()
                 self.user = DBUser(uid: self.user?.uid ?? "", anon: self.user?.anon ?? true, likedSayings: d?["likedSayings"] as! [String], email: d?["email"] as? String, displayName: d?["displayName"] as? String)
-                print("[ SignIn ] returning user, loaded data:", self.user)
+                print("[ SignIn ] returning user, loaded data:", self.user ?? "")
             }
         })
     }
