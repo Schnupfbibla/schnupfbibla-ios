@@ -28,7 +28,20 @@
 		898CBFD02979E1090001C6F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */; };
 		898CBFD52979E48F0001C6F4 /* SBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFD42979E48F0001C6F4 /* SBDataModel.swift */; };
 		898CBFD72979E6AC0001C6F4 /* Saying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CBFD62979E6AC0001C6F4 /* Saying.swift */; };
+		89966FB92982FAEC00E8CD26 /* schnupfbibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89966FB82982FAEC00E8CD26 /* schnupfbibleUITests.swift */; };
+		89966FBB2982FAEC00E8CD26 /* schnupfbibleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89966FBA2982FAEC00E8CD26 /* schnupfbibleUITestsLaunchTests.swift */; };
+		89966FC32982FE3D00E8CD26 /* Uninstall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89966FC22982FE3D00E8CD26 /* Uninstall.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89966FBC2982FAEC00E8CD26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898CBFA92979B4C50001C6F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898CBFB02979B4C50001C6F4;
+			remoteInfo = schnupfbible;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8933B5DA298196860056043F /* AccountDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataModel.swift; sourceTree = "<group>"; };
@@ -51,6 +64,10 @@
 		898CBFCF2979E1090001C6F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		898CBFD42979E48F0001C6F4 /* SBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBDataModel.swift; sourceTree = "<group>"; };
 		898CBFD62979E6AC0001C6F4 /* Saying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saying.swift; sourceTree = "<group>"; };
+		89966FB62982FAEC00E8CD26 /* schnupfbibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = schnupfbibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89966FB82982FAEC00E8CD26 /* schnupfbibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schnupfbibleUITests.swift; sourceTree = "<group>"; };
+		89966FBA2982FAEC00E8CD26 /* schnupfbibleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schnupfbibleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		89966FC22982FE3D00E8CD26 /* Uninstall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uninstall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,13 @@
 				89164004297FE2F30013901A /* FirebaseAuth in Frameworks */,
 				8987394A297B210400A52599 /* WelcomeSheet in Frameworks */,
 				89164006297FE2F30013901A /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89966FB32982FAEC00E8CD26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				898CBFB32979B4C50001C6F4 /* schnupfbible */,
+				89966FB72982FAEC00E8CD26 /* schnupfbibleUITests */,
 				898CBFB22979B4C50001C6F4 /* Products */,
 				8987395E297B59DF00A52599 /* Frameworks */,
 			);
@@ -116,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				898CBFB12979B4C50001C6F4 /* schnupfbible.app */,
+				89966FB62982FAEC00E8CD26 /* schnupfbibleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,10 +154,7 @@
 				898CBFB42979B4C50001C6F4 /* schnupfbibleApp.swift */,
 				8933B5D92981966C0056043F /* DataModel */,
 				8933B5DC298196990056043F /* Interface */,
-				898CBFB62979B4C50001C6F4 /* ContentView.swift */,
-				8987394B297B474C00A52599 /* WelcomeSheetContent.swift */,
-				898CBFC42979B8F50001C6F4 /* SayingView.swift */,
-				898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */,
+				89966FAF2982F9B800E8CD26 /* Views */,
 				8933B5E52981AFE00056043F /* SignInWApple */,
 				898CBFCC2979D5A90001C6F4 /* Settings */,
 				898CBFB82979B4C60001C6F4 /* Assets.xcassets */,
@@ -156,6 +179,27 @@
 				89873946297B191A00A52599 /* SubmissionViewModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		89966FAF2982F9B800E8CD26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				898CBFB62979B4C50001C6F4 /* ContentView.swift */,
+				8987394B297B474C00A52599 /* WelcomeSheetContent.swift */,
+				898CBFC42979B8F50001C6F4 /* SayingView.swift */,
+				898CBFC62979CBA90001C6F4 /* SingleAxisGeoReader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89966FB72982FAEC00E8CD26 /* schnupfbibleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89966FB82982FAEC00E8CD26 /* schnupfbibleUITests.swift */,
+				89966FBA2982FAEC00E8CD26 /* schnupfbibleUITestsLaunchTests.swift */,
+				89966FC22982FE3D00E8CD26 /* Uninstall.swift */,
+			);
+			path = schnupfbibleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +228,25 @@
 			productReference = 898CBFB12979B4C50001C6F4 /* schnupfbible.app */;
 			productType = "com.apple.product-type.application";
 		};
+		89966FB52982FAEC00E8CD26 /* schnupfbibleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89966FBE2982FAEC00E8CD26 /* Build configuration list for PBXNativeTarget "schnupfbibleUITests" */;
+			buildPhases = (
+				89966FC12982FD2500E8CD26 /* ShellScript */,
+				89966FB22982FAEC00E8CD26 /* Sources */,
+				89966FB32982FAEC00E8CD26 /* Frameworks */,
+				89966FB42982FAEC00E8CD26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89966FBD2982FAEC00E8CD26 /* PBXTargetDependency */,
+			);
+			name = schnupfbibleUITests;
+			productName = schnupfbibleUITests;
+			productReference = 89966FB62982FAEC00E8CD26 /* schnupfbibleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,6 +262,10 @@
 				TargetAttributes = {
 					898CBFB02979B4C50001C6F4 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					89966FB52982FAEC00E8CD26 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 898CBFB02979B4C50001C6F4;
 					};
 				};
 			};
@@ -220,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				898CBFB02979B4C50001C6F4 /* schnupfbible */,
+				89966FB52982FAEC00E8CD26 /* schnupfbibleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +303,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89966FB42982FAEC00E8CD26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89966FC12982FD2500E8CD26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/bin/xcrun simctl uninstall booted ch.jesseb0rn.schnupfbible\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		898CBFAD2979B4C50001C6F4 /* Sources */ = {
@@ -259,7 +354,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89966FB22982FAEC00E8CD26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89966FC32982FE3D00E8CD26 /* Uninstall.swift in Sources */,
+				89966FB92982FAEC00E8CD26 /* schnupfbibleUITests.swift in Sources */,
+				89966FBB2982FAEC00E8CD26 /* schnupfbibleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89966FBD2982FAEC00E8CD26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898CBFB02979B4C50001C6F4 /* schnupfbible */;
+			targetProxy = 89966FBC2982FAEC00E8CD26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		898CBFBE2979B4C60001C6F4 /* Debug */ = {
@@ -381,7 +494,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = schnupfbible/schnupfbible.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"schnupfbible/Preview Content\"";
 				DEVELOPMENT_TEAM = 8C7KT6ZU59;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -405,7 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = " -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +540,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = schnupfbible/schnupfbible.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"schnupfbible/Preview Content\"";
 				DEVELOPMENT_TEAM = 8C7KT6ZU59;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -451,7 +564,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = " -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -462,6 +575,48 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		89966FBF2982FAEC00E8CD26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7KT6ZU59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbibleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = schnupfbible;
+			};
+			name = Debug;
+		};
+		89966FC02982FAEC00E8CD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8C7KT6ZU59;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.jesseb0rn.schnupfbibleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = schnupfbible;
 			};
 			name = Release;
 		};
@@ -482,6 +637,15 @@
 			buildConfigurations = (
 				898CBFC12979B4C60001C6F4 /* Debug */,
 				898CBFC22979B4C60001C6F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89966FBE2982FAEC00E8CD26 /* Build configuration list for PBXNativeTarget "schnupfbibleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89966FBF2982FAEC00E8CD26 /* Debug */,
+				89966FC02982FAEC00E8CD26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
